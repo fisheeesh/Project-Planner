@@ -1,37 +1,59 @@
 <template>
-    <div class="project" @click="showDetail">
-        <h3>{{ project.title }}</h3>
-        <div v-if="isShow">
-            <p>{{ project.projectDetail }}</p>
+    <div class="project" >
+        <div class="flexing">
+            <div>
+                <h3 @click="showDetail">{{ project.title }}</h3>
+            </div>
+            <div>
+                <span class="material-icons">delete</span>
+                <span class="material-icons">edit</span>
+                <span class="material-icons">done</span>
+            </div>
         </div>
+        <p v-if="isShow">{{ project.projectDetail }}</p>
     </div>
 </template>
 
 <script>
 export default {
-    data(){
-        return{
-            isShow : false
+    data() {
+        return {
+            isShow: false
         }
     },
     props: [
         'project'
     ],
     methods: {
-        showDetail(){
+        showDetail() {
             this.isShow = !this.isShow
         }
     }
 }
 </script>
 <style>
-.project{
+.project {
     padding: 20px;
     background-color: #f2f2f2;
-    cursor: pointer;
     margin: 10px;
+    border-left: 6px solid crimson;
+    border-radius: 8px 0 0 5px;
 }
-h3{
+
+h3 {
     color: indigo;
+    cursor: pointer;
+}
+.flexing{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+span{
+    margin-left: 6px;
+}
+span:hover{
+    color:  #777;
+    cursor: pointer;
 }
 </style>
