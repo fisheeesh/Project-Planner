@@ -1,5 +1,5 @@
 <template>
-    <div class="project" :class="{complete : project.completed}">
+    <div class="project" :class="{complete : project.complete}">
         <div class="flexing">
             <div>
                 <h3 @click="showDetail">{{ project.title }}</h3>
@@ -7,7 +7,7 @@
             <div>
                 <span class="material-icons" @click="deleteProject">delete</span>
                 <span class="material-icons">edit</span>
-                <span class="material-icons">done</span>
+                <span class="material-icons" @click="updateProject">done</span>
             </div>
         </div>
         <p v-if="isShow">{{ project.projectDetail }}</p>
@@ -19,7 +19,7 @@ export default {
     data() {
         return {
             isShow: false,
-            api : 'http://localhost:3000/projects'
+            api : 'http://localhost:3000/projects/'
         }
     },
     props: [
@@ -30,9 +30,21 @@ export default {
             this.isShow = !this.isShow
         },
         deleteProject(){
-            let deleteRoute = this.api + "/" + this.project.id
+            let deleteRoute = this.api + this.project.id
             fetch(deleteRoute, {method : "DELETE"})
             .then(()=> this.$emit('delete', this.project.id))
+            .catch(error => console.log(error))
+        },
+        updateProject(){
+            let updateRoute = this.api + this.project.id
+            fetch(updateRoute, {
+                method : "PATCH",
+                headers : {"Content-Type" : "application/json"},
+                body : JSON.stringify({
+                    complete : !this.project.complete
+                })
+            })
+            .then(()=> this.$emit('update', this.project.id))
             .catch(error => console.log(error))
         }
     }
