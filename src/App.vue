@@ -1,5 +1,4 @@
 <template>
-
   <router-view/>
 </template>
 
@@ -9,6 +8,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   max-width: 600px;
+  /* background-color: red; */
   margin: 0 auto;
   color: #2c3e50;
 }
