@@ -1,5 +1,5 @@
 <template>
-    <div class="project" >
+    <div class="project" :class="{complete : project.completed}">
         <div class="flexing">
             <div>
                 <h3 @click="showDetail">{{ project.title }}</h3>
@@ -62,5 +62,8 @@ span{
 span:hover{
     color:  #777;
     cursor: pointer;
+}
+.complete{
+    border-left: 6px solid green;
 }
 </style>
