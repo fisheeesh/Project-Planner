@@ -7,18 +7,6 @@
       "complete": true
     },
     {
-      "id": "2",
-      "title": "Project Title 2",
-      "projectDetail": "Project Detail 2",
-      "complete": true
-    },
-    {
-      "id": "3",
-      "title": "Project Title 3",
-      "projectDetail": "Project Detail 3 GG pr kwar dfada",
-      "complete": false
-    },
-    {
       "id": "dc3e",
       "title": "Project Planner",
       "projectDetail": "Manage Project Lifetime Process. User can edit, delete and check all the projects",

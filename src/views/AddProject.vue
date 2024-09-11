@@ -85,7 +85,4 @@ form button{
     font-size: 16px;
     cursor: pointer;
 }
-button:hover{
-    background: #00bc77;
-}
 </style>
