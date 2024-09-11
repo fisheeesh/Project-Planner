@@ -4,7 +4,7 @@
       "id": "1",
       "title": "Project Title 1",
       "projectDetail": "Project Detail 1",
-      "complete": false
+      "complete": true
     },
     {
       "id": "2",
@@ -15,13 +15,13 @@
     {
       "id": "3",
       "title": "Project Title 3",
-      "projectDetail": "Project Detail 3",
+      "projectDetail": "Project Detail 3 GG pr kwar dfada",
       "complete": false
     },
     {
       "id": "dc3e",
       "title": "Project Planner",
-      "projectDetail": "Manage Project Lifetime Process",
+      "projectDetail": "Manage Project Lifetime Process. User can edit, delete and check all the projects",
       "complete": false
     }
   ]

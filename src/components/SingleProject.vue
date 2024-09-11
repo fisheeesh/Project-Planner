@@ -9,7 +9,7 @@
                 <router-link :to="{name : 'editProject', params : {id : project.id}}">
                     <span class="material-icons">edit</span>
                 </router-link>
-                <span class="material-icons" @click="updateProject">done</span>
+                <span class="material-icons" @click="updateProject" :class="{done : project.complete, undone : !project.complete}">done</span>
             </div>
         </div>
         <p v-if="isShow">{{ project.projectDetail }}</p>
@@ -80,4 +80,11 @@ span:hover{
 .complete{
     border-left: 6px solid green;
 }
+.done{
+    color: green;
+}
+.undone{
+    color: crimson;
+}
+
 </style>

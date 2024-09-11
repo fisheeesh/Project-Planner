@@ -1,6 +1,6 @@
 <template>
   <h1>Edit Project</h1>
-  <form>
+  <form @submit.prevent="updateProject">
     <label for="">Project Title</label>
     <input type="text" v-model="title">
     <label>Project Detail</label>
@@ -28,6 +28,19 @@ export default {
         this.detail = datas.projectDetail
       })
       .catch(error => console.log(error))
+    },
+    methods:{
+      updateProject(){
+        fetch('http://localhost:3000/projects/' + this.id, {
+          method : "PATCH",
+          headers : {"Content-Type" : "application/json"},
+          body : JSON.stringify({
+            title : this.title,
+            projectDetail : this.detail
+          })
+        })
+        .then(()=> this.$router.push({name : 'home'}))
+      }
     }
 }
 </script>
