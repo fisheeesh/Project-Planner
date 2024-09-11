@@ -4,13 +4,25 @@
       "id": "1",
       "title": "Project Title 1",
       "projectDetail": "Project Detail 1",
-      "complete": true
+      "complete": false
     },
     {
       "id": "dc3e",
       "title": "Project Planner",
       "projectDetail": "Manage Project Lifetime Process. User can edit, delete and check all the projects",
+      "complete": true
+    },
+    {
+      "id": "4d92",
+      "title": "New Project",
+      "projectDetail": "New Project Detail",
       "complete": false
+    },
+    {
+      "id": "ceb1",
+      "title": "Chapter 9",
+      "projectDetail": "Project Planner Project (second project in my vue course), I have to rebuild it. This is my reminder",
+      "complete": true
     }
   ]
 }
