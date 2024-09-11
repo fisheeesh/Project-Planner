@@ -6,7 +6,9 @@
             </div>
             <div>
                 <span class="material-icons" @click="deleteProject">delete</span>
-                <span class="material-icons">edit</span>
+                <router-link :to="{name : 'editProject', params : {id : project.id}}">
+                    <span class="material-icons">edit</span>
+                </router-link>
                 <span class="material-icons" @click="updateProject">done</span>
             </div>
         </div>
@@ -53,7 +55,7 @@ export default {
 <style>
 .project {
     padding: 20px;
-    background-color: #f2f2f2;
+    background-color: white;
     margin: 10px;
     border-left: 6px solid crimson;
     border-radius: 8px 0 0 5px;
