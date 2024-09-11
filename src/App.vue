@@ -19,5 +19,10 @@ export default {
   margin: 0 auto;
   color: #2c3e50;
 }
-
+body{
+  background-color: #eee;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 </style>
