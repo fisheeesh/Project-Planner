@@ -72,9 +72,6 @@ h3 {
 }
 span{
     margin-left: 6px;
-}
-span:hover{
-    color:  #777;
     cursor: pointer;
 }
 .complete{

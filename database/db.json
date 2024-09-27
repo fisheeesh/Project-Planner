@@ -1,28 +1,16 @@
 {
   "projects": [
     {
-      "id": "1",
-      "title": "Project Title 1",
-      "projectDetail": "Project Detail 1",
-      "complete": false
-    },
-    {
-      "id": "dc3e",
-      "title": "Project Planner",
-      "projectDetail": "Manage Project Lifetime Process. User can edit, delete and check all the projects",
-      "complete": true
-    },
-    {
-      "id": "4d92",
+      "id": "3eed",
       "title": "New Project",
       "projectDetail": "New Project Detail",
-      "complete": false
+      "complete": true
     },
     {
-      "id": "ceb1",
-      "title": "Chapter 9",
-      "projectDetail": "Project Planner Project (second project in my vue course), I have to rebuild it. This is my reminder",
-      "complete": true
+      "id": "a822",
+      "title": "Composition Api",
+      "projectDetail": "IDK yet",
+      "complete": false
     }
   ]
 }
